@@ -1,0 +1,39 @@
+
+body {
+    background-color: lightgray;
+    text-align: center;
+}
+
+h1 {
+    color: blue;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 10;
+}
+
+.card {
+    background-color: white;
+    border: 1px; solid gray;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    justify-content; center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+img {
+    width: 500px;
+    max-width; 90%;
+}
