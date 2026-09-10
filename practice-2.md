@@ -1,0 +1,1 @@
+'# CHGO는 Christian Human Growth Ontology이다'
