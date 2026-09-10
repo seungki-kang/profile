@@ -1,0 +1,72 @@
+:root {
+  --bg: #211d33;
+  --card: #2b2648;
+  --card-border: #3d3660;
+  --text: #efe9f5;
+  --text-dim: #ab9fc4;
+  --accent: #e8b94a;
+  --correct: #6fbf8b;
+  --wrong: #e0755f;
+  --mono: "Consolas", "SFMono-Regular", monospace;
+  --serif: "Georgia", "Times New Roman", serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  display: flex;
+  justify-content: center;
+  padding: 48px 20px;
+}
+
+.app { width: 100%; max-width: 520px; }
+.app-header { margin-bottom: 28px; }
+.eyebrow { font-family: var(--mono); font-size: 13px; color: var(--accent); margin: 0 0 10px; }
+h1 { font-family: var(--serif); font-size: 32px; line-height: 1.2; margin: 0 0 8px; }
+.tagline { color: var(--text-dim); font-size: 15px; margin: 0; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 28px;
+}
+
+.progress-row {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
+  font-family: var(--mono); font-size: 13px; color: var(--text-dim);
+}
+.progress-track { flex: 1; height: 6px; background: var(--card-border); border-radius: 999px; overflow: hidden; }
+.progress-fill { height: 100%; width: 12.5%; background: var(--accent); transition: width 0.3s ease; }
+
+#question-text { font-size: 20px; line-height: 1.5; margin: 0 0 20px; }
+.options { display: flex; flex-direction: column; gap: 10px; margin-bottom: 8px; }
+
+.option-btn {
+  text-align: left; padding: 14px 16px; border-radius: 10px;
+  border: 1px solid var(--card-border); background: rgba(255, 255, 255, 0.03);
+  color: var(--text); font-family: var(--serif); font-size: 15px; cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.option-btn:hover:not(:disabled) { border-color: var(--accent); }
+.option-btn:disabled { cursor: default; }
+.option-btn.correct { border-color: var(--correct); background: rgba(111, 191, 139, 0.15); }
+.option-btn.wrong { border-color: var(--wrong); background: rgba(224, 117, 95, 0.15); }
+
+.feedback { min-height: 24px; font-size: 14px; color: var(--text-dim); }
+
+.btn {
+  font-family: var(--mono); font-size: 14px; padding: 12px 20px;
+  border-radius: 8px; border: none; cursor: pointer; width: 100%;
+}
+.btn-primary { background: var(--accent); color: #211d33; }
+.btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }
+
+#result-screen h2 { font-size: 40px; margin: 4px 0 12px; }
+#result-message, #best-score { color: var(--text-dim); margin: 0 0 20px; }
+.hidden { display: none; }

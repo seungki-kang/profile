@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>바이브코딩 퀴즈</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+    <header class="app-header">
+      <p class="eyebrow">$ practice --mode=vibe-coding</p>
+      <h1>바이브코딩 개념 퀴즈</h1>
+      <p class="tagline">HTML · CSS · JavaScript가 함께 만든 첫 인터랙티브 프로젝트</p>
+    </header>
+
+    <section id="quiz-screen" class="card">
+      <div class="progress-row">
+        <span id="progress-label">1 / 8</span>
+        <div class="progress-track">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+      </div>
+
+      <h2 id="question-text">문제를 불러오는 중...</h2>
+      <div id="options" class="options"></div>
+      <p id="feedback" class="feedback"></p>
+
+      <button id="next-btn" class="btn btn-primary" disabled>다음 문제 →</button>
+    </section>
+
+    <section id="result-screen" class="card hidden">
+      <p class="eyebrow">결과</p>
+      <h2 id="result-score">0 / 8</h2>
+      <p id="result-message"></p>
+      <p id="best-score"></p>
+      <button id="restart-btn" class="btn btn-primary">다시 풀기</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
