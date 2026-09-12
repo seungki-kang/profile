@@ -40,6 +40,12 @@ const questions = [
     options: ["Ctrl + S", "Ctrl + `", "Ctrl + P", "Ctrl + Shift + E"],
     answer: 1,
   },
+  {
+    q: "GitHub Page는 무엇을 하는 가요?",
+    options: ["코드를 저장함", "정적 웹사이트로 무료 배포", "데이터베이스 제공", "관계없음"]
+    answer: 1,
+  },
+  
 ];
 
 // 2. 현재 상태를 기억하는 변수들
